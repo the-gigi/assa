@@ -1,14 +1,12 @@
-# Kubectl ServiceAccount Impersonation
+# In-cluster kubectl
 
-The projet name `assa` is first and foremost a palindrome, which is always fun, but it also means `as sa`.
+Kubectl is a fantastic tool. Typically users run it locally where it makes requests over the network
+to a remote cluster. This is fine most of the time, but in some cases you may want kubectl to run
+inside the cluster.
 
-It allows you to run kubectl commands as a ServiceAccont.
+This project provides Docker images that contains kubectl with various versions
+and a Go package to run arbitrary commands in the container that has kubectl.
 
-Kubectl lets you impersonate a user or a group, but not a service account. This may seem surprising
-at first because users, groups and service accounts are all equals when it comes to role bindings.
-
-However, you have to remember that kubectl is a client-side tool. When it sends requests to the Kubernetes
-API server it needs to send the identity of the requester. This identity can be only a user or a group.
 
 
 
