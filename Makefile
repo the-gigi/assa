@@ -1,4 +1,4 @@
-VERSION=1.21
+VERSION=1.26
 IMAGE = g1g1/kubectl:$(VERSION)
 
 build:
